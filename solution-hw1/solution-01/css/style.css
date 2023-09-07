@@ -1,13 +1,15 @@
+/* line under logo */
 hr {
-    border-color: 3px solid black;
+    border-color: solid black;
 }
 
+/* logo aligned to left */
 .logocontainer {
     text-align: left;
     border-style: none;
 }   
 
-
+/* product images */
 img.imagelayout {
     border-color: black;
     border-width: 2px;
@@ -23,6 +25,7 @@ img.imagelayout {
 
 }
 
+/* Product hilighted when hovered */
 .button:hover {
     font-weight: bold;
     border:none;
@@ -30,10 +33,12 @@ img.imagelayout {
 
 }
 
+/* Product name bolds when hovered */
 .boldname:hover {
     font-weight: bold;
 }
 
+/* Dropdown label style */
 .dropdown {
     display: block;
     text-align: left;
@@ -45,6 +50,7 @@ img.imagelayout {
 
 }
 
+/* boxxed button*/
 .boxbutton {
     display: block;
     text-align: center;
@@ -62,6 +68,7 @@ img.imagelayout {
   
 }
 
+/* hilighted page */
 h2 span {
     background-color: yellow;    
 }
@@ -88,6 +95,7 @@ h3 {
     text-transform: uppercase;
 }
 
+/* Price Headers */
 
 h4 {
     text-align: center;
@@ -95,6 +103,8 @@ h4 {
     font-weight: 100;
     font-size: small;
 }
+
+/*Detail product Header */
 
 h5 {
     display: block;
@@ -104,6 +114,7 @@ h5 {
     font-weight: lighter;
 }
 
+/* Tiny Remove Buttons */
 h6 {    
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -111,6 +122,7 @@ h6 {
     font-weight: bold;
 }
 
+/* Roll Descriptions in cart */
 p {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
