@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Product Detail Page</title>
+
+  <head>
+    <link rel="stylesheet" href="solution-01/css/style.css">
+  </head>
+
+  <body>
+    <!-- Logo-->
+    <div class = "logocontainer" >
+      <div>
+        <a href="./index.html"> <img src = "../assets/logo/logo-01.svg" width = '400' alt = "Logo Bun Bun Shop" /> </a>
+      </div>
+    </div>
+
+     <!-- Line-->
+    <hr>
+
+    <!--Cart and Product Link-->
+    <a href="./ProductDetailPage.html"> <h2 > <span>  Products </span> </h2> </a>
+    <a href="./shoppingcart.html"> <h2> Cart</h2> </a>
+
+    <h5> Original Cinnamon Roll</h5>
+    <img class = "imagelayout" src = "../assets/products/original-cinnamon-roll.jpg" width = '600' alt = "Logo Bun Bun Shop" /> 
+    <h5> Customize our delicious hand-made cinnamon roll to your liking!</h5>
+
+    <!--Dropdown menus for packing and glazing type-->
+
+    <label for = "Glazing" class ="dropdown">Glazing: </label>
+
+    <select name = "Glazing"  id = "Glazing"  >
+      <option value = "original" > Keep Original </option>
+      <option value = "Sugar" > Sugar Milk </option>
+      <option value = "Vanilla" > Vanilla Milk </option>
+      <option value = "Double" > Double Chocolate </option>
+    </select>
+
+    <label for = "Pack Size" class ="dropdown" >Pack Size: </label>
+
+    <select name = "Pack Size "  id = "Pack Size"  >
+      <option value = "1" > 1 </option>
+      <option value = "3" > 3 </option>
+      <option value = "6" > 6</option>
+      <option value = "12" > 12 </option>
+    </select>
+
+    <h5> $2.49 </h5>
+    <!--add to cart button -->
+    
+    <a href="./shoppingcart.html"><button type = "button" class = "boxbutton">  
+      Add To Cart
+    </button></a>
+
+  </body>
+</html>
