@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Product Detail Page</title>
+
+  <head>
+    <link rel="stylesheet" href="solution-2/css/style.css">
+  </head>
+
+  <body>
+    <div class = "logolinkscontainer" >
+        <!-- Logo-->
+
+        <div class = "logocontainer" >
+                <a href="./index.html"> <img src = "../assets/logo/logo-01.svg" width = '400' alt = "Logo Bun Bun Shop" /> </a>
+        </div>
+
+
+        <div class ="sidecontainer"> 
+
+            <!--Cart and Product Link-->
+            <div class= "navigationcontainer" >
+                    <a href="./ProductDetailPage.html" > <p class = 'navigationtext' > Products </p> </a>
+                    <a href="./shoppingcart.html" > <p class = 'navigationtext' > Cart</p> </a>
+            </div>
+            <!--line-->
+            <div>
+                <hr>
+            </div>
+            <!--heading-->
+            <h1> Original Cinnamon Roll </h1>
+        </div>
+    </div>
+
+    <div class = "photodetailcontainer">
+        <img class = "imagelayout" src = "../assets/products/original-cinnamon-roll.jpg" width = '600' alt = "Logo Bun Bun Shop" /> 
+    </div>
+    
+    <div class = "sidedetailcontainer">
+        <div>
+            <p class = "paragraphdetailtext"> Customize our delicious hand-made cinnamon roll to your liking!</p>
+        </div>
+
+        <p class = "labeldetailtext"> Glazing: </p>
+
+        <button type = "button" class = "boxdropdownbutton">
+            <select name = "Glazing"  id = "Glazing" >
+            <option value = "original" class = "boxbutton" > Keep Original </option>
+            <option value = "Sugar" class = "boxbutton" > Sugar Milk </option>
+            <option value = "Vanilla" class = "boxbutton" > Vanilla Milk </option>
+            <option value = "Double" class = "boxbutton" > Double Chocolate </option>
+            </select>
+
+        </button>
+
+
+        <p class = "labeldetailtext"> Pack Size: </p>
+
+        <button type = "button" class = "boxdropdownbutton" >
+            <select name = "PackSize "  id = "PackSize">
+            <option value = "1" class = "boxbutton" > 1 </option>
+            <option value = "3" class = "boxbutton"> 3 </option>
+            <option value = "6" class = "boxbutton"> 6</option>
+            <option value = "12" class = "boxbutton"> 12 </option>
+            </select>
+        </button>
+
+
+        <!--add to cart button -->
+        <div class ="addtocartcontainer">
+            <p class = "detailedprice"> $2.49 </p>
+            <a href="./shoppingcart.html"> <button type = "button" class = "boxbutton">  
+            Add To Cart
+            </button></a>
+        </div>
+        
+
+
+    <!--Dropdown menus for packing and glazing type-->
+
+
+
+  </body>
+</html>

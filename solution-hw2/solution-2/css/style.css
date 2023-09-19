@@ -1,0 +1,322 @@
+
+/* logo*/
+
+.logolinkscontainer{
+    display:flex;
+    justify-content: space-between;
+}
+
+.logocontainer {
+    display:flex;
+    border-style: none;
+    padding: 30px;
+}
+
+/*where the nev container and line go*/
+.sidecontainer{
+    display: block;
+    margin-bottom: 75px;
+    margin-right: 300px;
+}
+
+/*line*/
+hr {
+    background-color: black;
+    height: 4px;
+    width: 1150px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: left;
+}
+
+/*header*/
+h1 {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* product links container outer shell*/
+
+.navigationcontainer{
+    display: flex;
+    text-align: right;
+    margin-left: 800px ;
+    margin-top: 50px;
+}
+
+/* product links*/
+
+.navigationtext{
+
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif;
+    font-size: x-large;
+    color : black;
+    justify-content: space-between;
+    
+}
+
+/* some space between the links*/
+a {
+    margin-right: 50px;
+}
+
+/* link hilighted when hovered */
+.navigationtext:hover {
+    display: inline-flex;
+    font-weight: bold;
+    border:none;
+    background-color: yellow;
+}
+
+/* productgallerycontainer*/
+
+.productgallery{ 
+    display: block;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 320px;
+    padding-right: 320px;
+    justify-content: space-between; 
+
+}
+
+/* outer container of row 1 product cards*/
+
+.row1container{
+    display: flex;
+    margin: center;
+    justify-content: space-between;
+    margin-bottom: 30px; 
+}
+
+/* outer container of row 1 product cards*/
+
+.row2container{
+    display: flex;
+    margin: center; 
+    justify-content: space-between;   
+}
+
+/* outer shell of product card*/
+.productbutton {
+    border: none;
+    background-color: white;
+    text-align: center;
+    margin: center;
+    justify-content: space-between;  
+}
+
+/* inner image layout*/
+.imagelayout {
+    display: flex;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    margin: auto;
+}
+
+/* inner product title*/
+.cinnamonrollproducttitle {
+    display: flex;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: medium;
+}
+
+/* inner product price*/
+.cinnamonrollproductprice {
+    display: flex;
+    margin-left: auto;
+    font-size: small;
+}
+
+/* Product hilighted when hovered */
+.productbutton:hover {
+    font-weight: bold;
+    border:none;
+    background-color: yellow;
+}
+
+/* left side of fetail page */
+.photodetailcontainer{
+    display: flex;
+    float: left;
+    padding-left: 100px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+/*right side of detail page */
+
+.sidedetailcontainer{
+    display: block;
+    float: right;
+    text-align: left;
+    margin-right: 300px;
+
+}
+
+.addtocartcontainer{
+    display: flex;
+    width: 100%;
+    text-align: right;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.paragraphdetailtext{
+    font-family: Helvetica, sans-serif;
+    font-size: x-large;
+    font-weight: lighter;
+    width: 500px;
+    padding-bottom: 50px;
+}
+
+.labeldetailtext{
+    font-family: Helvetica, sans-serif;
+    font-size: x-large;
+    font-weight: lighter;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+/* boxxed button*/
+.boxbutton {
+    display: flex;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin: auto;
+    background-color: white;
+    border: black;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    float: right
+}
+
+.boxbutton:hover {
+    font-weight: bold;    
+    background-color: yellow;
+  
+}
+
+.boxdropdownbutton {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin: auto;
+    background-color: white;
+    border: black;
+    border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+
+}
+
+/*editing the dropdown menus to fit in box design*/
+select#Glazing{
+    width: 350px;
+    border: none;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    
+}
+
+select#PackSize{
+    width: 350px;
+    border: none;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+
+}
+
+
+.detailedprice{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    text-align: right;
+    color: black;
+    float: left;
+
+}
+
+/*the overall largest outershell container for the shopping cart*/
+.cartcontainer{
+    display: block;
+    width : 60%;
+    margin-left: 30%;
+    margin-top: -100px;
+
+}
+/* first stacked block section */
+.innercartcontainer1{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 0%;
+
+
+}
+/* second stacked block section */
+.innercartcontainer2{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 0%;
+
+
+}
+
+/* first flex section */
+.imagesection{
+    display: flex;
+    text-align: left;
+}
+
+/* second flex section */
+.textsection{
+    padding-left: 50px;
+    padding-top: 50px;
+    display: flex;
+    text-align: left;
+    margin-right: -200px;
+}
+
+/* third flex section */
+.pricesection{
+    padding-left: 50px;
+    padding-top: 60px;
+    display: flex;
+    text-align: right;
+    margin-right: 0px;
+}
+/* remove blocks stacked*/
+
+.removeblock {
+    margin-top: -35px;
+    font-family: Helvetica, sans-serif;
+    font-size: x-small;
+}
+
+/* last inner ocntainer of cart, total price of products*/
+
+.totalcontainer3 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: right;
+    margin-left: 50px;
+}
+
