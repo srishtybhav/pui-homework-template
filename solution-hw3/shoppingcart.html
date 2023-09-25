@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+
+  <head>
+    <link rel="stylesheet" href="solution-3/css/style.css">
+
+
+    <!-- Add external JS file -->
+    <script defer src="js/app.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class = "logolinkscontainer" >
+        <!-- Logo-->
+
+        <div class = "logocontainer" >
+                <a href="./index.html"> <img src = "../assets/logo/logo-01.svg" width = '400' alt = "Logo Bun Bun Shop" /> </a>
+        </div>
+
+
+        <div class ="sidecontainer"> 
+
+            <!--Cart and Product Link-->
+            <div class= "navigationcontainer" >
+                    <a href="./index.html" > <p class = 'navigationtext' > Products </p> </a>
+                    <a href="./shoppingcart.html" > <p class = 'navigationtext' > Cart</p> </a>
+            </div>
+            <!--line-->
+            <div>
+                <hr>
+            </div>
+            <!--heading-->
+            <h1> Shopping Cart </h1>
+        </div>
+    </div>
+
+    <!--Large container with three sections for images description and price-->
+    <!--Products in cart-->
+    <div class ="cartcontainer">
+
+        <!--First stacked block-->
+        <div class ="innercartcontainer1">
+            <!--First flex horizontal-->
+            <div class = "imagesection" >
+                <img class = "imagelayout" src = "../assets/products/original-cinnamon-roll.jpg" width = '150' alt = "Logo Bun Bun Shop" /> 
+            </div>
+            <!--second flex horizontal-->
+            <div class = "textsection">
+                <p class ="paragraphdetailtext" > Original Cinnamon Roll <br>
+                    Glazing: Keep Original <br>
+                    Pack Size: 1 </p>
+            </div>
+            <!--third flex horizontal-->
+            <div class = "pricesection">
+                <p class ="paragraphdetailtext">$ 2.49</p>
+            </div>
+
+        </div>
+
+        <p class = "removeblock"> Remove </p>
+
+        <!--second stacked block-->
+        <div class ="innercartcontainer2">
+            <!--First flex horizontal-->
+            <div class = "imagesection" >
+                <img class = "imagelayout" src = "../assets/products/double-chocolate-cinnamon-roll.jpg" width = '150' alt = "Logo Bun Bun Shop" /> 
+            </div>
+            <!--second flex horizontal-->            
+            <div class = "textsection">
+                <p class ="paragraphdetailtext"> Double-Chocolate Cinnamon Roll <br>
+                    Glazing: Sugar Milk <br>
+                    Pack Size: 6
+                </p>
+            </div>
+            <!--third flex horizontal-->
+            <div class = "pricesection">
+                <p class ="paragraphdetailtext">$ 27.45 </p>
+            </div>
+        </div>
+
+        <p class = "removeblock"> Remove </p>
+       
+        <hr>
+
+        <!--Third stacked block-->
+       <div class = "totalcontainer3">
+            <!--First flex horizontal. kept empty to maintsin ratio-->
+            <div class = "imagesection" >
+                
+            </div>
+            <!--second flex horizontal-->
+            <div class = "textsection">
+                <p class ="paragraphdetailtext">Total </p>
+            </div>
+            <!--third flex horizontal-->
+            <div class = "pricesection">
+                <p class ="paragraphdetailtext">$ 29.94 </p>
+            </div>
+
+       </div>
+    
+        <!--checkout button-->
+        <button type = "button" class = "boxbutton">  
+            Checkout
+        </button>
+    </div>
+    
+
+  </body>
+
+</html>

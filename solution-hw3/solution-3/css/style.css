@@ -235,7 +235,7 @@ a {
 }
 
 /*editing the dropdown menus to fit in box design*/
-select#Glazing{
+.productdropdowns{
     text-align: left;
     border: none;
     background-color: white;

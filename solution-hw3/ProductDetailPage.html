@@ -4,7 +4,12 @@
   <title>Product Detail Page</title>
 
   <head>
-    <link rel="stylesheet" href="solution-2/css/style.css">
+    <link rel="stylesheet" href="solution-3/css/style.css">
+
+
+    <!-- Add external JS file -->
+    <script defer src="js/app.js" async></script>
+
   </head>
 
   <body>
@@ -21,7 +26,7 @@
 
             <!--Cart and Product Link-->
             <div class= "navigationcontainer" >
-                    <a href="./ProductDetailPage.html" > <p class = 'navigationtext' > Products </p> </a>
+                    <a href="./index.html" > <p class = 'navigationtext' > Products </p> </a>
                     <a href="./shoppingcart.html" > <p class = 'navigationtext' > Cart</p> </a>
             </div>
             <!--line-->
@@ -46,11 +51,8 @@
 
             <!--DropdownMenus-->
             <button type = "button" class = "boxdropdownbutton">
-                <select name = "Glazing"  id = "Glazing" >
-                <option value = "original" class = "boxbutton" > Keep Original </option>
-                <option value = "Sugar" class = "boxbutton" > Sugar Milk </option>
-                <option value = "Vanilla" class = "boxbutton" > Vanilla Milk </option>
-                <option value = "Double" class = "boxbutton" > Double Chocolate </option>
+                <select class = "productdropdowns"  name = "Glazing"  id = "Glazing" onchange="glazingChange(this)">
+   
                 </select>
 
             </button>
@@ -59,19 +61,16 @@
             <p class = "labeldetailtext"> Pack Size: </p>
 
             <button type = "button" class = "boxdropdownbutton" >
-                <select name = "PackSize "  id = "Glazing">
-                <option value = "1" class = "boxbutton" > 1 </option>
-                <option value = "3" class = "boxbutton"> 3 </option>
-                <option value = "6" class = "boxbutton"> 6</option>
-                <option value = "12" class = "boxbutton"> 12 </option>
+                <select class = "productdropdowns" name = "PackSize "  id = "PackSize" onchange="glazingChange(this)">
+
                 </select>
             </button>
 
 
             <!--add to cart button -->
             <div class ="addtocartcontainer">
-                <p class = "detailedprice"> $2.49 </p>
-                <a href="./shoppingcart.html"> <button type = "button" class = "boxbutton">  
+                <p class = "detailedprice"> </p>
+                <a href="./shoppingcart.html"> <button type = "button" class = "boxbutton" >  
                 Add To Cart
                 </button></a>
             </div>
