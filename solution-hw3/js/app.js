@@ -35,6 +35,7 @@ for (var i=0; i < 4 ; i++){
 
 function glazingChange(This) {
     // get index of selected glazing option not value
+    // reference video for selecting value(wasnt ultimatley needed) https://www.youtube.com/watch?v=1_hAT8uEG-w
 
     //var selected_option = Packing.value;
     var packing_index = Packing.selectedIndex; // variable that stores index of selected packing

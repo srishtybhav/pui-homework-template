@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bun Bun Shop</title>
+    <link rel="stylesheet" href="solution-4/css/style.css">
+</head>
+
+
+<body>
+    <!--outer shell container logo and links-->
+
+    <div class = "logolinkscontainer" >
+        <!-- Logo-->
+
+        <div class = "logocontainer" >
+                <a href="./index.html"> <img src = "../assets/logo/logo-01.svg" width = '400' alt = "Logo Bun Bun Shop" /> </a>
+        </div>
+
+
+        <div class ="sidecontainer"> 
+
+            <!--Cart and Product Link-->
+            <div class= "navigationcontainer" >
+                    <a href="./index.html" class=""> <p class = 'navigationtext' > Products </p> </a>
+                    <a href="./shoppingcart.html" > <p class = 'navigationtext' > Cart</p> </a>
+
+            </div>
+            <div>
+                <hr>
+            </div>
+
+            <h1> Our Handmade Cinnamon Rolls </h1>
+
+
+        </div>
+    </div>
+
+
+      
+
+      <!-- Product Buttons of the different cinnamon rolls-->
+
+    <div class = 'productgallery' >
+            <!-- Product Buttons row 1-->
+            <div class = 'row1container'>
+                <button type = "button" class = "productbutton">
+                    <a href="./ProductDetailPage.html?roll=Original" > <img class = "imagelayout" src = "../assets/products/original-cinnamon-roll.jpg" height = '285px' alt = "Original cinnamon roll" /> </a>
+                    <span class = 'cinnamonrollproducttitle'>
+                        <span> Original Cinnamon Roll </span>
+                    </span>
+                    <span class = 'cinnamonrollproductprice'> $2.49 </span>
+                </button> 
+
+                <button type = "button" class = "productbutton">  
+                    <a href="./ProductDetailPage.html?roll=Apple" > <img class = "imagelayout" src = "../assets/products/apple-cinnamon-roll.jpg" height =  '285px' alt = "apple-cinnamon-roll" /> </a>
+                    <span class = 'cinnamonrollproducttitle'>
+                        <span > Apple Cinnamon Roll </span>
+                    </span>
+                    <span class = 'cinnamonrollproductprice'> $3.49 </span>
+                </button> 
+
+                <button type = "button" class = "productbutton">  
+                    <a href="./ProductDetailPage.html?roll=Raisin" > <img class = "imagelayout"src = "../assets/products/raisin-cinnamon-roll.jpg" height =  '285px'alt = "raisin-cinnamon-roll" /> </a>
+                    <span class = 'cinnamonrollproducttitle'>
+                        <span> Raisin Cinnamon Roll </span>
+                    </span>     
+                    <span class = 'cinnamonrollproductprice'> $2.99 </span>
+                </button> 
+            </div>
+
+            <!-- Product Buttons row 2-->
+            <div class = 'row2container'>
+            
+                <button type = "button" class = "productbutton" >         
+                    <a href="./ProductDetailPage.html?roll=Walnut" > <img class = "imagelayout" src = "../assets/products/walnut-cinnamon-roll.jpg" height = '285px' alt = "walnut-cinnamon-roll" /> </a>
+                    <span class = 'cinnamonrollproducttitle'>
+                        <span>  Walnut Cinnamon Roll  </span>
+                    </span>
+                    <span class = 'cinnamonrollproductprice'> $3.49 </span> 
+ 
+                </button> 
+                
+                <button type = "button" class = "productbutton"> 
+                    <a href="./ProductDetailPage.html?roll=Double-Chocolate" > <img class = "imagelayout" src = "../assets/products/double-chocolate-cinnamon-roll.jpg" height = '285px' alt = "double-chocolate-cinnamon-roll" /> </a>
+                    <span class = 'cinnamonrollproducttitle'>
+                        <span> Double-Chocolate Cinnamon Roll </span>
+                    </span>
+                    <span class = 'cinnamonrollproductprice' > $3.99 </span> 
+
+                </button>  
+            
+                <button type = "button" class = "productbutton">     
+                    <a href="./ProductDetailPage.html?roll=Strawberry" > <img class = "imagelayout" src = "../assets/products/strawberry-cinnamon-roll.jpg" height = '285px' alt = "strawberry-cinnamon-roll" /> </a>
+                    <span class = 'cinnamonrollproducttitle'>
+                        <span> Strawberry Cinnamon Roll </span>
+                    </span>    
+                    <span class = 'cinnamonrollproductprice'> $3.99 </span>
+                </button>    
+            </div>
+    </div>
+    <!-- Add external JS file -->
+    <script defer src="js/app.js"async></script>
+    <script defer src="js/rollsData.js" async></script>
+
+    
+</body>
+
+
+
+</html>

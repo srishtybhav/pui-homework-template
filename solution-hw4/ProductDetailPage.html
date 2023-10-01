@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Product Detail Page</title>
+
+  <head>
+    <link rel="stylesheet" href="solution-4/css/style.css">
+
+  </head>
+
+  <body>
+
+    <div class = "logolinkscontainer" >
+        <!-- Logo-->
+
+        <div class = "logocontainer" >
+                <a href="./index.html"> <img src = "../assets/logo/logo-01.svg" width = '400' alt = "Logo Bun Bun Shop" /> </a>
+        </div>
+
+
+        <div class ="sidecontainer"> 
+
+            <!--Cart and Product Link-->
+            <div class= "navigationcontainer" >
+                    <a href="./index.html" > <p class = 'navigationtext' > Products </p> </a>
+                    <a href="./shoppingcart.html" > <p class = 'navigationtext' > Cart</p> </a>
+            </div>
+            <!--line-->
+            <div>
+                <hr>
+            </div>
+            <!--heading-->
+            <h1 id="Productdetailtitle"> "" </h1>
+        </div>
+    </div>
+    <div class = "productdetailcontainer">
+        <div class = "photodetailcontainer">
+            <img id="cinnamonrolldetailimage" src = '' width = '600px' alt = "Logo Bun Bun Shop"> </img>
+        </div>
+        
+        <div class = "sidedetailcontainer">
+            <div>
+                <p class = "paragraphdetailtext"> Customize our delicious hand-made cinnamon roll to your liking!</p>
+            </div>
+
+            <p class = "labeldetailtext"> Glazing: </p>
+
+            <!--DropdownMenus-->
+            <button type = "button" class = "boxdropdownbutton">
+                <select class = "productdropdowns"  name = "Glazing"  id = "Glazing" onchange="glazingChange(this)">
+   
+                </select>
+
+            </button>
+
+
+            <p class = "labeldetailtext"> Pack Size: </p>
+
+            <button type = "button" class = "boxdropdownbutton" >
+                <select class = "productdropdowns" name = "PackSize "  id = "PackSize" onchange="glazingChange(this)">
+                ""
+                </select>
+            </button>
+
+
+            <!--add to cart button -->
+            <div class ="addtocartcontainer">
+                <p class = "detailedprice"> </p>
+                <button type = "button" class = "boxbutton" onclick="addtocart(this)" >  
+                Add To Cart
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Add external JS file -->
+    <script defer src="js/app.js"async></script>
+    <script defer src="js/rollsData.js" async></script>
+  </body>
+
+
+</html>

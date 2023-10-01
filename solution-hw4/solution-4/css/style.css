@@ -1,0 +1,346 @@
+body {
+    max-width: 1200px;
+    width: 100%;
+    margin: 100px;
+    padding: 0px;
+}
+
+/* logo*/
+
+.logolinkscontainer{
+    display:flex;
+    justify-content: space-between;
+}
+
+.logocontainer {
+    display:flex;
+    border-style: none;
+    padding: 30px;
+}
+
+/*where the nev container and line go*/
+.sidecontainer{
+    display: block;
+    margin-bottom: 75px;
+
+}
+
+/*line*/
+hr {
+    background-color: black;
+    height: 4px;
+    width: 1150px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: left;
+}
+
+h1 {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*changing titles*/
+#Productdetailtitle {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* product links container outer shell*/
+
+.navigationcontainer{
+    display: flex;
+    text-align: right;
+    margin-left: 800px ;
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+/* product links*/
+
+.navigationtext{
+    margin-right: 50px;
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif;
+    font-size: x-large;
+    color : black;
+    justify-content: space-between;
+    text-decoration: none;
+    
+}
+
+/* some space between the links*/
+a {
+    text-decoration: none;
+}
+
+/* link hilighted when hovered */
+.navigationtext:hover {
+    display: inline-flex;
+    font-weight: bold;
+    border:none;
+    background-color: yellow;
+}
+
+/* productgallerycontainer*/
+
+.productgallery{ 
+    display: block;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 200px;
+    padding-right: 350px;
+    justify-content: space-between; 
+
+}
+
+/* outer container of row 1 product cards*/
+
+.row1container{
+    display: flex;
+    margin: center;
+    justify-content: space-between;
+    margin-bottom: 30px; 
+}
+
+/* outer container of row 1 product cards*/
+
+.row2container{
+    display: flex;
+    margin: center; 
+    justify-content: space-between;   
+}
+
+/* outer shell of product card*/
+.productbutton {
+    border: none;
+    background-color: white;
+    text-align: center;
+    justify-content: space-between; 
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+
+}
+
+/* inner image layout*/
+.imagelayout {
+    display: flex;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    margin: auto;
+}
+
+/* product detail image layout*/
+#cinnamonrolldetailimage {
+    display: flex;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    margin: auto;    
+}
+
+/* inner product title*/
+.cinnamonrollproducttitle {
+    display: flex;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 30px;
+}
+
+/* inner product price*/
+.cinnamonrollproductprice {
+    display: flex;
+    margin-left: auto;
+    font-size: small;
+    margin-top: 10px; 
+}
+
+/* Product hilighted when hovered */
+.productbutton:hover {
+    font-weight: bold;
+    border:none;
+    background-color: yellow;
+}
+
+.productdetailcontainer{
+    margin-left: 150px;
+    width: 100%;
+}
+
+/* left side of fetail page */
+.photodetailcontainer{
+    display: flex;
+
+    float: left;
+}
+
+/*right side of detail page */
+
+.sidedetailcontainer{
+    display: block;
+    float: right;
+    text-align: left;
+    width: 400px;
+
+}
+
+.addtocartcontainer{
+    display: flex;
+    width: 100%;
+    text-align: right;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.paragraphdetailtext{
+    font-family: Helvetica, sans-serif;
+    font-size: xx-large;
+    font-weight: lighter;
+}
+
+.labeldetailtext{
+    font-family: Helvetica, sans-serif;
+    font-size: x-large;
+    font-weight: lighter;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+/* boxxed button*/
+.boxbutton {
+    display: flex;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    background-color: white;
+    border: black;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    float: right
+}
+
+.boxbutton:hover {
+    font-weight: bold;    
+    background-color: yellow;
+  
+}
+
+.boxdropdownbutton {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    background-color: white;
+    border: black;
+    border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+
+}
+
+/*editing the dropdown menus to fit in box design*/
+.productdropdowns{
+    text-align: left;
+    border: none;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    
+}
+
+
+.detailedprice{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    text-align: right;
+    color: black;
+    float: left;
+
+}
+
+/*the overall largest outershell container for the shopping cart*/
+.cartcontainer{
+    display: block;
+    width : 100%;
+    margin-left: 35%;
+
+
+}
+/* first stacked block section */
+.innercartcontainer1{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding-bottom: 0%;
+
+
+
+}
+/* second stacked block section */
+.innercartcontainer2{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding-bottom: 0%;
+
+
+}
+
+/* first flex section */
+.imagesection{
+    display: flex;
+    text-align: left;
+}
+
+/* second flex section */
+.textsection{
+
+    padding-top: 50px;
+    display: flex;
+    text-align: left;
+    width: 50%;
+
+
+}
+
+/* third flex section */
+.pricesection{
+    padding-top: 60px;
+    display: flex;
+    text-align: right;
+    margin-right: 0px;
+}
+/* remove blocks stacked*/
+
+.removeblock {
+    margin-top: -15px;
+    font-family: Helvetica, sans-serif;
+    font-size: small;
+}
+
+/* last inner ocntainer of cart, total price of products*/
+
+.totalcontainer3 {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    text-align: right;
+}
+
+#Checkoutbutton {
+    margin-top: 50px;
+    margin-right: 200px;
+}
