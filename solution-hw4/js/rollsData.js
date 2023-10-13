@@ -1,4 +1,4 @@
-const rolls = {
+const cinrolls = {
     "Original": {
         "basePrice": 2.49,
         "imageFile": "original-cinnamon-roll.jpg"
@@ -36,20 +36,22 @@ headerElement.innerHTML = rollType + " Cinnamon Roll";
 
 // the specific image and change it to the corresponding image when clicking an item in gallery
 const rollImage = document.querySelector('#cinnamonrolldetailimage');
-rollImage.src = '../assets/products/' + rolls[rollType]["imageFile"];
+rollImage.src = '../assets/products/' + cinrolls[rollType]["imageFile"];
 
 // the specific price on detail page and change the total calculated price based on new base prices in rolls list
 const rollPrice = document.querySelector('.detailedprice');
-rollPrice.innerHTML = '$' + rolls[rollType]["basePrice"];
-const rollbasePrice = rolls[rollType]["basePrice"];
+rollPrice.innerHTML = '$' + cinrolls[rollType]["basePrice"];
+const rollbasePrice = cinrolls[rollType]["basePrice"];
 //console.log(rollPrice);
 
 
 // empty cart which will be loaded into when add to cart button
-cart = {
+cart = [
+    
+]
 
 
-}
+
 
 // class roll which constructs a new cart taking the parameters of the roll flavor, glazing, packing size, and base price (NOT the total price)
 class Roll {
@@ -65,6 +67,7 @@ class Roll {
 function addtocart(This) {
 
     const rollCart = new Roll(rollType, rollGlazing, packSize, rollbasePrice );
-    console.log(rollCart); // check console to see that objects of the list match the items on screen
-;
+
+    cart.push(rollCart);
+    console.log(cart);
 }

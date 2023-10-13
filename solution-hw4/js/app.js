@@ -1,4 +1,3 @@
-
 // Selected elements
 const Glazing = document.querySelector('#Glazing');
 const Packing = document.querySelector('#PackSize');
@@ -51,7 +50,7 @@ function glazingChange(This) {
 
   
     // update the price ...
-    let currentprice = (glazePrice + rollbasePrice) * packPrice; //multiply the glazing by the pack size
+    let currentprice = (glazePrice + basePrice) * packPrice; //multiply the glazing by the pack size
     rollPrice.innerHTML = "$" + ((currentprice * 100)/100).toFixed(2); // money format
     
     //console.log(rollGlazing); 
