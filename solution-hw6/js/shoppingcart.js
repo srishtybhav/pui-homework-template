@@ -1,10 +1,14 @@
+
+
+
+
 class Roll {
     constructor(rollType, rollGlazing, packSize, rollPrice, calculated, rollURL) {
         this.type = rollType;
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = rollPrice;
-        this.calcPrice = calculated.innerText;
+        this.calcPrice = calculated;
         this.imageURL = rollURL  
 
 
@@ -13,15 +17,30 @@ class Roll {
     }
 }
 
+function addToCart () {
+    var calculatedPrice = ((glazePrice + rollbasePrice) * packPrice).toFixed(2);
+    cinnamonroll = addNewRoll(rollType,rollGlazing, packSize, rollbasePrice, calculatedPrice, cinrolls[rollType]["imageFile"] );
+    
+
+    saveToLocalStorage();
+}
+
+
 //cart of added rolls
 const cart = [];
-
+//creates a new roll object adds it to cart
 function addNewRoll(rollType, rollGlazing, packSize, rollPrice, calculated, rollURL){
+    
+    //new roll object created
     const cinnamonroll = new Roll(rollType, rollGlazing, packSize, rollPrice, calculated, rollURL);
+    //stored in our cart
 
     cart.push(cinnamonroll);
+    localStorage.setItem('storedroll', cart );
+    console.log(cart);
     return cinnamonroll
 }
+
 
 //create the roll template
 function createElement(cinnamonroll){
@@ -56,8 +75,10 @@ function updateElement(cinnamonroll) {
     rollBodyElement.innerText = "$" + cinnamonroll.calculatedPrice;
     displayTotalPrice(0);
 
-
+    saveToLocalStorage();
 }
+
+
 
 //function that deletes roll
 function deleteRoll(cinnamonroll) {
@@ -71,66 +92,36 @@ function deleteRoll(cinnamonroll) {
 
 }
 
-//total price function
-function displayTotalPrice(subtractionamount){
-    
-    let totalcost = 61.83 - subtractionamount;
-    
-    const totalpriceofrolls = document.querySelector("#totalprice");
-    totalpriceofrolls.innerText = "$" + totalcost;
+//hw 6
 
 
+function saveToLocalStorage (cinnamonroll) {
 
-}
-console.log(cart);
+    const cartstring = JSON.stringify(cart);
+    //convert objects into strings and put them in a local storage key val
+    localStorage.setItem('storedroll', cartstring);
+    console.log(cartstring);
 
-
-function addtocart(This) {
-    const cinnamonroll = new Roll(rollType, rollGlazing, packSize, rollbasePrice, rollPrice.innerHTML, (cinrolls[rollType]["imageFile"]) );
-    // Check for existing rolls stored in the cart
-    var cartrolls = JSON.parse(localStorage.getItem(cart))
-    var cartrollsstring = JSON.stringify(cartrolls)
-    if (localStorage.getItem(cart)){
-        var cartrolls = JSON.parse(localStorage.getItem(cart));
-
-        cartrolls.push(cinnamonroll);
-
-        localStorage.setItem(cart, cartrollsstring);
-    
-    } else {
-        var cartrolls = [cinnamonroll];
-        saveToLocalStorage(cartrolls); //store it
-        retrieverollsFromLocalStorage(cartrolls);
-    
-    } 
-    console.log(cartrolls);
 
 }
 
 
-function saveToLocalStorage(){
-    var cartrolls = Array.from(cart);
-    var cartrollsstring = JSON.stringify(cartrolls)
-   localStorage.setItem(cart, cartrollsstring); 
-}
+function retrieveFromLocalStorage() {
+    //retrieve the objects stored
+    const cartstring = localStorage.getItem('storedroll');
+    const cart = JSON.parse(cartstring);
+    console.log(cart);
 
-function retrieverollsFromLocalStorage(){
-    var cartrolls = JSON.parse(localStorage.getItem(cart))
-    var cartrollsstring = JSON.stringify(cartrolls)
+    for (const rolldata of  cart) {
+        const cinnamonroll = addNewRoll(rolldata.type, rolldata.glazing, rolldata.size, 
+            rolldata.basePrice, rolldata.calcPrice, rolldata.imageURL);
 
-    for (const rollData of cart ) {
-        const cinnamonroll = addrolltopage(rollData.type, rollData.glazing, rollData.size, rollData.basePrice, rollData.calcPrice, rollData.imageURL);
         createElement(cinnamonroll);
+
     }
 
 }
 
-if (localStorage.getItem(cart) != null) {
-    retrieverollsFromLocalStorage();
-  }
-
-
-
-
-
-//localStorage.clear();
+if (localStorage.getItem('storedroll')!= null) {
+    retrieveFromLocalStorage();
+}
