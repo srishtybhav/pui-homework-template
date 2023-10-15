@@ -119,7 +119,7 @@ function updateElement(cinnamonroll, totalcost) {
 
 
 }
-//roll objects added
+//roll objects
 
 const cinnamonroll1 = addrolltopage(
     "Original" , 
@@ -169,6 +169,7 @@ for (const cinnamonroll of cart) {
 
 //function that deletes roll
 function deleteRoll(cinnamonroll) {
+    const subtractionamount = parseFloat(cinnamonroll.calculatedPrice);
     displayTotalPrice(cinnamonroll.calculatedPrice);
     //remove from ui
     cinnamonroll.element.remove();
@@ -188,7 +189,7 @@ function displayTotalPrice(subtractionamount){
     let totalcost = 61.83 - subtractionamount;
     
     const totalpriceofrolls = document.querySelector("#totalprice");
-    totalpriceofrolls.innerText = "$" + totalcost;
+    totalpriceofrolls.innerText = "$" + totalcost.toFixed(2);;
 
 
 

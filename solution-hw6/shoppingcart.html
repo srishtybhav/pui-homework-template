@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+
+  <head>
+    <link rel="stylesheet" href="solution-6/css/style.css">
+
+
+  </head>
+
+  <body>
+
+    <div class = "logolinkscontainer" >
+        <!-- Logo-->
+
+        <div class = "logocontainer" >
+                <a href="./index.html"> <img src = "../assets/logo/logo-01.svg" width = '400' alt = "Logo Bun Bun Shop" /> </a>
+
+
+        <div class ="sidecontainer"> 
+
+            <!--Cart and Product Link-->
+            <div class= "navigationcontainer" >
+                    <a href="./index.html" > <p class = 'navigationtext' > Products </p> </a>
+                    <a href="./shoppingcart.html" > <p class = 'navigationtext' > Cart</p> </a>
+            </div>
+            <!--line-->
+            <div>
+                <hr>
+            </div>
+            <!--heading-->
+            <h1> Shopping Cart </h1>
+        </div>
+    </div>
+
+    <!--Large container with three sections for images description and price-->
+    <!--Products in cart-->
+    <div class ="cartcontainer">
+        <div id = "roll-list"> 
+            <template id = 'roll-template' >
+                <div class="cinnamonroll"> 
+                    <!--First stacked block-->
+                    <div class ="innercartcontainer1">
+                        <!--First flex horizontal-->
+                        <div class = "imagesection" >
+                            <img id = "cartrollimage2" src = "../assets/products/original-cinnamon-roll.jpg" width = '150' alt = "Logo Bun Bun Shop" /> 
+                        </div>
+                        <!--second flex horizontal-->
+                        <div class = "textsection">
+                            <p id = rolltitle class ="paragraphdetailtext" > Original Cinnamon Roll <br>
+                                Glazing: Keep Original <br>
+                                Pack Size: 1 </p>
+                        </div>
+                        <!--third flex horizontal-->
+                        <div class = "pricesection">
+                            <p id = rollpricetext class ="paragraphdetailtext">$ 2.49</p>
+                        </div>
+                    </div>
+                    <p class = "removeblock"> Remove </p>
+                </div>
+
+            </template>
+        </div>
+    </div>
+
+        <!--Third stacked block-->
+    <div class = "checkoutsection"> 
+        <hr>
+        <div class = "totalcontainer3">
+                <!--First flex horizontal. kept empty to maintsin ratio-->
+                <div class = "imagesection" >
+                    
+                </div>
+                <!--second flex horizontal-->
+                <div class = "textsection">
+                    <p class ="paragraphdetailtext">Total </p>
+                </div>
+                <!--third flex horizontal-->
+                <div class = "pricesection">
+                    <p id = "totalprice" class ="paragraphdetailtext">$ 29.94 </p>
+                </div>
+        </div>
+    </div>
+                <!--checkout button-->
+                <button type = "button" class = "boxbutton" name = "Checkoutbutton" id = "Checkoutbutton" >  
+                    Checkout
+                </button>
+
+
+        <!-- Add external JS file -->
+
+    <script defer  src="js/app.js" ></script>
+    <script defer  src="js/rollsData.js" ></script>   
+    <script defer  src="js/shoppingcart.js" ></script>  
+
+  </body>
+
+
+
+</html>
