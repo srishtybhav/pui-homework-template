@@ -13,31 +13,7 @@ class Roll {
     }
 }
 
-//function that inputs the roll parameters whenever add to cart is onclick
-var cart = new Set ();
-function addtocart(This) {
-    const rollCart = new Roll(rollType, rollGlazing, packSize, rollbasePrice, (glazePrice + rollbasePrice) * packPrice, cinrolls[rollType]["imageFile"]);
-    // Check for existing rolls stored in the cart
 
-    if (localStorage.getItem(cart)){
-        var cartrolls = JSON.parse(localStorage.getItem(cart));
-
-        cartrolls.push(rollCart);
-
-        localStorage.setItem(cart, JSON.stringify(cartrolls));
-    
-    } else {
-        var cartrolls = [rollCart];
-        saveToLocalStorage(cartrolls); //store it
-    
-    }  
-
-    console.log(cartrolls);
-    for (const rolldata of cartrolls) {
-        createElement(rollCart);  
-    }
-
-}
 
 
 //create the roll template
@@ -97,17 +73,47 @@ function saveToLocalStorage(cartrolls){
 
 }
 
-function retrieverollsFromLocalStorage(){
+function retrieverollsFromLocalStorage(cartrolls,rollCart){
     if (! localStorage.getItem(cart)){
         return [];
     }
-    return JSON.parse(localStorage.getItem(cart));
-    
+    localStorage.setItem('storedroll',JSON.parse(localStorage.getItem(cart)));    
 
-    
+    for (const rollCart of cart) {
+        createElement(rollCart);  
+    }
+
+    return JSON.parse(localStorage.getItem(cart));   
 }
 
+if (localStorage.getItem('storedroll') != null) {
+    retrieverollsFromLocalStorage(this);
+  }
 
+  //function that inputs the roll parameters whenever add to cart is onclick
+var cart = new Set ();
+function addtocart(This) {
+    const rollCart = new Roll(rollType, rollGlazing, packSize, rollbasePrice, (glazePrice + rollbasePrice) * packPrice, cinrolls[rollType]["imageFile"]);
+    // Check for existing rolls stored in the cart
+
+    if (localStorage.getItem(cart)){
+        var cartrolls = JSON.parse(localStorage.getItem(cart));
+
+        cartrolls.push(rollCart);
+
+        localStorage.setItem(cart, JSON.stringify(cartrolls));
+    
+    } else {
+        var cartrolls = [rollCart];
+        saveToLocalStorage(cartrolls); //store it
+    
+    }  
+
+    console.log(cartrolls);
+    retrieverollsFromLocalStorage(cartrolls,rollCart);
+    //createElement(rollCart);
+
+}
 
 /*
 //cart of added rolls
