@@ -41,7 +41,7 @@ rollImage.src = '../assets/products/' + cinrolls[rollType]["imageFile"];
 
 // the specific price on detail page and change the total calculated price based on new base prices in rolls list
 const rollPrice = document.querySelector('.detailedprice');
-const calcrollPrice = rollPrice.innerText
+//const calcrollPrice = rollPrice.innerText
 rollPrice.innerHTML = cinrolls[rollType]["basePrice"];
 const rollbasePrice = cinrolls[rollType]["basePrice"];
 

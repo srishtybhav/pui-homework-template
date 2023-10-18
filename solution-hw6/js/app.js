@@ -10,7 +10,7 @@ let packPrice = 1; //default multiplier
 let glazePrice = 0; //default multiplier
 var rollGlazing = 'Keep Original';
 var packSize = '1';
-var currentprice;
+let currentprice = 0;
 
 /* make the value for each option property the price change*/
 const dropdownOptions = {
@@ -41,7 +41,7 @@ function glazingChange(This) {
 
   
     // update the price ...
-    let currentprice = (glazePrice + rollbasePrice) * packPrice; //multiply the glazing by the pack size
+    currentprice = (glazePrice + rollbasePrice) * packPrice; //multiply the glazing by the pack size
     rollPrice.innerHTML = "$" + ((currentprice * 100)/100).toFixed(2); // money format
     //console.log(rollGlazing); 
     //console.log(packSize);

@@ -82,6 +82,7 @@ function addrolltopage(rollType, rollGlazing, packSize, rollPrice, rollURL, calc
 //create the roll template
 function createElement(cinnamonroll){
     const template = document.querySelector('#roll-template');
+    console.log(template);
     const clone = template.content.cloneNode(true);
     cinnamonroll.element = clone.querySelector('.cinnamonroll');
     const rollListElement = document.querySelector('#roll-list');

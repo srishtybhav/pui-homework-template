@@ -330,6 +330,7 @@ a {
     display: flex;
     text-align: right;
     margin-right: 0px;
+
 }
 /* remove blocks stacked*/
 
@@ -340,6 +341,7 @@ a {
 }
 
 .checkoutsection{
+    display: block;
     text-align: right;
     margin-left: 35%;
 }
@@ -358,4 +360,5 @@ a {
 #Checkoutbutton {
     margin-left: 200px ;
     text-align: right;
+
 }

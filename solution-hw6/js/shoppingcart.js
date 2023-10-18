@@ -1,14 +1,11 @@
 
-
-
-
 class Roll {
     constructor(rollType, rollGlazing, packSize, rollPrice, calculated, rollURL) {
         this.type = rollType;
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = rollPrice;
-        this.calcPrice = calculated;
+        this.calcPrice = calculated.toFixed(2);
         this.imageURL = rollURL  
 
 
@@ -17,15 +14,103 @@ class Roll {
     }
 }
 
-function addToCart () {
-    var calculatedPrice = ((glazePrice + rollbasePrice) * packPrice).toFixed(2);
-    cinnamonroll = addNewRoll(rollType,rollGlazing, packSize, rollbasePrice, calculatedPrice, cinrolls[rollType]["imageFile"] );
+//function that inputs the roll parameters whenever add to cart is onclick
+var cart = new Set ();
+function addtocart(This) {
+    const rollCart = new Roll(rollType, rollGlazing, packSize, rollbasePrice, (glazePrice + rollbasePrice) * packPrice, cinrolls[rollType]["imageFile"]);
+    // Check for existing rolls stored in the cart
+
+    if (localStorage.getItem(cart)){
+        var cartrolls = JSON.parse(localStorage.getItem(cart));
+
+        cartrolls.push(rollCart);
+
+        localStorage.setItem(cart, JSON.stringify(cartrolls));
     
+    } else {
+        var cartrolls = [rollCart];
+        saveToLocalStorage(cartrolls); //store it
+    
+    }  
+
+    console.log(cartrolls);
+    for (const rolldata of cartrolls) {
+        createElement(rollCart);  
+    }
+
+}
+
+
+//create the roll template
+function createElement(rollCart){
+    const rollListElement = document.querySelector('#roll-list');
+    const template = document.querySelector('#roll-template');
+    const clone = template.content.cloneNode(true);
+    rollCart.element = clone.querySelector('.rollCart');
+
+
+    const btnDelete = rollCart.element.querySelector('.removeblock');
+    
+    btnDelete.addEventListener('click', () => {
+        deleteRoll(rollCart);
+    })
+    rollListElement.append(rollCart.element);
+
+    console.log(rollCart);
+
+
+    updateElement(rollCart);
+
+}
+//update dom elements of each roll
+function updateElement(rollCart) {
+    //select dom elements
+    const rollImageElement = rollCart.element.querySelector('#cartrollimage2');
+    const rollTitleElement = rollCart.element.querySelector('#rolltitle');
+    const rollBodyElement = rollCart.element.querySelector('#rollpricetext');
+    //edit dom elements
+    rollImageElement.src = '../assets/products/' + rollCart.imageURL;
+    rollTitleElement.innerText = rollCart.type  + " Cinnamon Roll\nGlazing: " + rollCart.glazing + "\nPack Size:" + rollCart.size;
+    rollBodyElement.innerText = "$" + rollCart.calcPrice;
+    displayTotalPrice(0);
 
     saveToLocalStorage();
 }
 
 
+
+//function that deletes roll
+function deleteRoll(rollCart) {
+    displayTotalPrice(rollCart.calculatedPrice);
+    //remove from ui
+    rollCart.element.remove();
+    //removefromcart
+    cart.delete(rollCart);
+    console.log(cart);
+
+
+}
+
+
+
+function saveToLocalStorage(cartrolls){
+   localStorage.setItem(cart, JSON.stringify(cartrolls)); 
+
+}
+
+function retrieverollsFromLocalStorage(){
+    if (! localStorage.getItem(cart)){
+        return [];
+    }
+    return JSON.parse(localStorage.getItem(cart));
+    
+
+    
+}
+
+
+
+/*
 //cart of added rolls
 const cart = [];
 //creates a new roll object adds it to cart
@@ -125,3 +210,4 @@ function retrieveFromLocalStorage() {
 if (localStorage.getItem('storedroll')!= null) {
     retrieveFromLocalStorage();
 }
+*/
