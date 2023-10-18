@@ -1,4 +1,3 @@
-
 class Roll {
     constructor(rollType, rollGlazing, packSize, rollPrice, calculated, rollURL) {
         this.type = rollType;
