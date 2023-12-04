@@ -1,0 +1,185 @@
+.body{
+    max-width: 1200px;
+    width: 100%;
+    padding: 0px;
+    margin: 5%;  
+}
+.mapimage{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.flex-container {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    align-content: center;
+}
+  
+.flexitemleft{
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+    flex-flow: row wrap;
+
+}
+
+.flexitemright{
+    width: 25%;
+    position: relative;
+    flex-flow: row wrap;
+    overflow: hidden;
+
+}
+
+h1{
+    font-family: Poppins ;
+    font-weight: 600;
+    font-size: xx-large;
+    margin-left: 1%;
+    margin-top: 2%;
+    color: #38282D;
+}
+h2 {
+    font-family: Poppins ;
+    font-weight: 500;
+    font-size: large;
+    color: #38282D;
+}
+
+h3{
+    font-family: Poppins ;
+    font-weight: 450;
+
+}
+h4{
+    font-family: Poppins ;
+
+}
+
+p{    
+    font-family: Poppins ;
+
+
+}
+
+.fillertext{
+    font-family: Poppins ;
+    font-weight: 300;
+    font-size: smaller;
+
+}
+#statenamecard{
+    font-family: Poppins;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.state{
+    fill:#FFF4F2;
+    fill-opacity:1;
+    stroke:#8D6672;
+    stroke-width:1.25;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    stroke-dasharray:none;
+    
+}
+
+
+.state:hover{
+    fill:#FDD8CB
+    ;
+}
+
+
+.stateabbreviations{
+    font-size:18px;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    font-stretch:normal;
+    line-height:125%;
+    letter-spacing:0px;
+    word-spacing:0px;
+    fill:#38282D;
+    fill-opacity:1;
+    stroke:none;
+    font-family: Poppins;
+}
+
+
+#state-popup{
+    background:#ffffff;
+    border-style: solid;
+    border-color: #D3D3D3;
+    border-width: .5px;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    box-shadow: 0 8px 24px rgba(0,0,0,15%);
+    font-family: Poppins;
+    font-weight: 3000;
+    transform: translate(xPosition, yPosition);
+    z-index: 999;
+}
+
+.hidden {
+    display: none;
+}
+
+.outfit-card{
+    height: 500px;
+    max-height: 100%;
+    max-width: 100%;
+    background:#ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,10%);
+    font-family: Poppins;
+    font-size: .8em;
+
+      
+}
+
+/*inner dropdown*/
+.dropdown{
+    font-family: Poppins;
+    font-weight: 400;
+    border-style: none;
+    font-size:18px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    appearance: none;
+
+}
+/*full dropdown*/
+.Seasondropdownbutton{
+    margin-left: 1%;
+    padding: 8px;
+    border-style: none; 
+    background-color: white;  
+    margin-bottom: 1%;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    font-size:15px;
+    box-shadow: 0 0px 15px rgba(0,0,0,10%);
+
+}
+
+#Season{
+    font-family:Poppins;
+    font-size:15px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,10%);
+    border-radius: 10px;
+}
