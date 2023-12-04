@@ -41,7 +41,7 @@ const cinrolls = {
         "basePrice": 3.49,
         "imageFile": "walnut-cinnamon-roll.jpg"
     },
-    "Double-Chocolate": {
+    "DoubleChocolate": {
         "basePrice": 3.99,
         "imageFile": "double-chocolate-cinnamon-roll.jpg"
     },
@@ -227,7 +227,7 @@ function glazingChange(This) {
     glazePrice = (dropdownOptions.glaze.glazingadd[glazing_index]); //reassign variable based on index.
 
   
-    // update the price ...
+    // update the price se...
     let currentprice = (glazePrice + rollbasePrice) * packPrice; //multiply the glazing by the pack size
     rollPrice.innerHTML = "$" + ((currentprice * 100)/100).toFixed(2); // money format
     
