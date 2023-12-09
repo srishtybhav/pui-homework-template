@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const seasonoption = document.querySelector('#Season');
   const selectedSeasonElement = document.querySelector('.selected-season');
   const selectedSeasonElementCard = document.querySelector('.selected-seasoncard');
-
+  const outfitimg = document.getElementById("outfitimage");
 
   //interpolating creates a gradient
   //scaleSequential maps numeric inputs to a range
@@ -102,32 +102,54 @@ var currentseason;
 
   }; 
 
+
+  
+
+
+
   //for each state's path...
   document.querySelectorAll('path').forEach((state) => {
     const stateId = state.id;
 
+  
     //if clicked the state on the card is adjusted
     state.addEventListener('click', (event) => {
+
+      var currenthigh = statedata[stateId][currentseason][2];
+      var currentlow = statedata[stateId][currentseason][3];
+      var currentavg = statedata[stateId][currentseason][0];
+
+      var celciushigh = ((currenthigh -32) * (5/9)).toFixed(1); //i realized i could just use the celcius conversion formula rather than manually putting it all in the dataset
+      var celciuslow = ((currentlow -32) *(5/9)).toFixed(1);// "
+
       stateNameOnCard.innerHTML = "State: " + stateId;
-      avgTempFCARD.innerHTML = "Average Temperature: " + statedata[stateId][currentseason][0] + "°F or " + statedata[stateId][currentseason][1] + "°C";
-      avghighcard.innerHTML = "Average High: " + statedata[stateId][currentseason][2] + "°F";
-      avglowcard.innerHTML = "Average Low: " + statedata[stateId][currentseason][3] + "°F";
-      currenthigh = statedata[stateId][currentseason][2];
-      currentlow = statedata[stateId][currentseason][3]
-      console.log(currenthigh);
-      console.log(currentlow);
+      avgTempFCARD.innerHTML = "Average Temperature: " + currentavg + "°F or " + statedata[stateId][currentseason][1] + "°C";
+      avghighcard.innerHTML = "Average High: " + currenthigh + "°F or " +celciushigh + "°C";
+      avglowcard.innerHTML = "Average Low: " + currentlow + "°F or " + celciuslow + "°C";
+
+      
+      if (currentlow < 20){ 
+        outfitimg.src = "../FinalProjPUI/images/below20degreeweather.jpg";
+      } else if (((currentavg + currentlow)/2) < 35) {
+        outfitimg.src = "../FinalProjPUI/images/20-40_degree_weather.jpg";
+      } else if (currentavg >= 35 && currentavg < 55){
+        outfitimg.src = "../FinalProjPUI/images/40-50_degree_weather.jpg";
+      } else if (currentavg >= 55 && currentavg < 65){
+        outfitimg.src = "../FinalProjPUI/images/55-65_degree_weather.jpg";
+      } else if (currentavg >= 65 && currentavg < 70){     
+        outfitimg.src = "../FinalProjPUI/images/65-70_degree_weather.jpg";  
+      } else if (currentavg >= 70 && currentavg < 80){ //mild warm weather
+        outfitimg.src = "../FinalProjPUI/images/70-80_degree_weather.jpg";  
+      } else if (currenthigh >= 80){ //80 degrees and above is the temp people consider to be hot
+        outfitimg.src = "../FinalProjPUI/images/80_degrees_and_upweather.jpg";
+      }
     });
     
-    //global variable storing current temperatures
-    var currenthigh;
-    var currentlow;
 
     //if the state is hovered over
     state.addEventListener('mouseover', (event) => {
       stateNamepopup.innerHTML = "State: " + stateId;
       avgTemppopupF.innerHTML = "Average Temperature: " + statedata[stateId][currentseason][0] + "°F or " + statedata[stateId][currentseason][1] + "°C";
-      avghigh.innerHTML = "Average High: " + statedata[stateId][currentseason][2] + "°F";
-      avglow.innerHTML = "Average Low: " + statedata[stateId][currentseason][3] + "°F";
     });
   });
 
@@ -140,6 +162,8 @@ var currentseason;
 
 });
 
+//outfitimg.src = "../FinalProjPUI/images/below20degreeweather.jpg"
+
 //figure out the range of temperatures (use farenheights for the sake of this)
 /*
 80 degrees an up
@@ -149,7 +173,7 @@ var currentseason;
 40-50
 30-40 
 20-30
-20 degrees and below: wear clothing that is layered, trenchcoats
+30 degrees and below: wear clothing that is layered, trenchcoats
 
 */
 

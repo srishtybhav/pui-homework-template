@@ -52,6 +52,7 @@ function updateScene() {
 function getScene(){
     //each dropdown option must trigger a switch in the Season Scene 
     switch(Seasonname){
+        
         case 'Summer':
             background(221,252,247); 
 

@@ -26,6 +26,7 @@
             <button type = "dropdownbutton" class = "Seasondropdownbutton"  >
                 <span class = "dropdown" > Season </span>
                 <select class = "dropdown"  name = "Seasons"  id = "Season" onchange="updateSelectedSeason(this.value)">
+                    <option>Select Season</option>                    
                     <option>Summer</option>
                     <option>Fall</option>
                     <option>Winter</option>
@@ -1189,14 +1190,13 @@
     
             <div class= "flexitemright" >
                 <div class = "outfit-card"  >
-                    <h2> Outfit Recommendation </h2>
+                    <h2> Outfit Ideas! </h2>
                     <h3 id = "statenamecard" > </h3>
-                    <p class = "selected-seasoncard" > Season: The season is currently unselected by default, use the dropdown menu to select one  </p>
-                    <p id = "avgweathercardF" > Average Temperature: </p>
-                    <p id = "avgHcard" > Average High Temperature: </p>
-                    <p id = "avgLcard" >  Average Low Temperature:</p>
-                    <img id = "outfitimage" src = "../FinalProjPUI/images/below20degreeweather.jpg" alt = "Under 20 Degree Weather" >
-
+                    <p class = "selected-seasoncard" ></p>
+                    <p id = "avgweathercardF" ></p>
+                    <p id = "avgHcard" ></p>
+                    <p id = "avgLcard" ></p>
+                    <img id = "outfitimage" src = "../FinalProjPUI/images/default.jpg" alt = "defaultimage" >
 
 
                 </div>
