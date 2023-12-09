@@ -19,6 +19,7 @@
     margin: 0 auto;
     align-content: center;
 }
+
   
 .flexitemleft{
     width: 70%;
@@ -34,6 +35,27 @@
     flex-flow: row wrap;
     overflow: hidden;
 
+}
+
+@media screen and (max-width:760px) {
+    .flex-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .flexitemleft{
+        width: 100%;
+        margin-top: 10%;
+        position: relative;
+        margin: 1%;
+    
+    }
+    .flexitemright{
+        width: 100%;
+        margin: 1%;
+        margin-top: 10%;
+        position: relative;
+    
+    }
 }
 
 h1{
@@ -87,15 +109,22 @@ p{
     stroke-miterlimit:4;
     stroke-opacity:1;
     stroke-dasharray:none;
-    
 }
 
+.rectstatecolor{
+    fill:#FFF4F2;
+    fill-opacity:1;
+    stroke:#8D6672;
+    stroke-width:1.25;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    stroke-dasharray:none;
+
+}
 
 .state:hover{
-    fill:#FDD8CB
-    ;
+    fill:#FDD8CB;
 }
-
 
 .stateabbreviations{
     font-size:18px;
@@ -123,7 +152,7 @@ p{
     position: absolute;
     box-shadow: 0 8px 24px rgba(0,0,0,15%);
     font-family: Poppins;
-    font-weight: 3000;
+    font-weight: 300;
     transform: translate(xPosition, yPosition);
     z-index: 999;
 }
@@ -133,19 +162,26 @@ p{
 }
 
 .outfit-card{
+    overflow: scroll;
     height: 500px;
-    max-height: 100%;
+    max-height: auto;
     max-width: 100%;
     background:#ffffff;
     padding: 20px;
     border-radius: 10px;
     position: relative;
     margin-left: 10px;
-    box-shadow: inset 0 0 5px rgba(0,0,0,10%);
     font-family: Poppins;
     font-size: .8em;
+    float: none;
+    box-sizing: border-box;
+}
 
-      
+#outfitimage {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
 }
 
 /*inner dropdown*/

@@ -40,6 +40,8 @@
             <h3 id = "statename" > </h3>
             <p class = "selected-season"> Select a Season! </p>
             <p id = "avgtempF">  </p> 
+            <p id = "avgH" > </p>
+            <p id = "avgL" > </p>
         </div>
 
         <div class="flex-container">
@@ -879,6 +881,7 @@
                     class = "state"
                     inkscape:connector-curvature="0" />
                     <rect
+                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="39.197197"
@@ -886,7 +889,7 @@
                     height="30"
                     width="55"
                     id="rect3123"
-                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+                    />
                 </g>
                 <g
                     onmouseover="showPopup('Vermont', event)"  
@@ -901,6 +904,7 @@
                 
                     inkscape:connector-curvature="0" />
                     <rect
+                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="39.197197"
@@ -908,7 +912,7 @@
                     height="30"
                     width="55"
                     id="rect3123-6"
-                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+                    />
                 </g>
                 <g
                     onmouseover="showPopup('Vermont', event)"  
@@ -922,6 +926,7 @@
                     class = "state"            
                     inkscape:connector-curvature="0" />
                     <rect
+                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="161.09373"
@@ -929,7 +934,7 @@
                     height="30"
                     width="55"
                     id="rect3123-5"
-                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+                    />
                 </g>
                 <g
                     onmouseover="showPopup('Connecticut', event)"  
@@ -943,6 +948,7 @@
                     class = "state"            
                     inkscape:connector-curvature="0" />
                     <rect
+                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="198.09373"
@@ -950,7 +956,7 @@
                     height="30"
                     width="55"
                     id="rect3123-63"
-                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+                    />
                 </g>
                 <g
         
@@ -964,6 +970,7 @@
                     class = "state"
                     inkscape:connector-curvature="0" />
                     <rect
+                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="235.09373"
@@ -971,7 +978,7 @@
                     height="30"
                     width="55"
                     id="rect3123-9"
-                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+                    />
                 </g>
                 <g
                     onmouseover="showPopup('Vermont', event)"  
@@ -984,7 +991,8 @@
                     id="Delaware"
                     class = "state"
                     inkscape:connector-curvature="0" />
-                    <rect
+                    <rect 
+                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="272.09375"
@@ -992,7 +1000,7 @@
                     height="30"
                     width="55"
                     id="rect3123-4"
-                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+                    />
                 </g>
                 <g
                     onmouseover="showPopup('Vermont', event)"  
@@ -1005,7 +1013,8 @@
                     id="Maryland"
                     class = "state"
                     inkscape:connector-curvature="0" />
-                    <rect
+                    <rect 
+                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="309.09375"
@@ -1013,7 +1022,7 @@
                     height="30"
                     width="55"
                     id="rect3123-8"
-                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+                    />
                 </g>
                 <text
                     xml:space="preserve"
@@ -1104,6 +1113,7 @@
                     class = "state" 
                     inkscape:connector-curvature="0" />
                     <rect
+                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="124.09375"
@@ -1111,7 +1121,7 @@
                     height="30"
                     width="55"
                     id="rect3123-5-4"
-                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+                    />
                 </g>
                 <text
                     xml:space="preserve"
@@ -1183,7 +1193,10 @@
                     <h3 id = "statenamecard" > </h3>
                     <p class = "selected-seasoncard" > Season: The season is currently unselected by default, use the dropdown menu to select one  </p>
                     <p id = "avgweathercardF" > Average Temperature: </p>
-                    <p class= "fillertext" id = "avgweathercardF" > Outfit Recommendation images coming soon. they will be pre made combinations based on the what range the average temperature lies in.: </p>
+                    <p id = "avgHcard" > Average High Temperature: </p>
+                    <p id = "avgLcard" >  Average Low Temperature:</p>
+                    <img id = "outfitimage" src = "/FinalProjPUI/images/below20degreeweather.jpg" alt = "Under 20 Degree Weather" >
+
 
 
                 </div>

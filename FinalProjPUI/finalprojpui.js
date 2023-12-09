@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const card = document.getElementById('outfit-card');
   const avgTempFCARD = document.getElementById('avgweathercardF');
   const avgTempCCARD = document.getElementById('avgweathercardC');
+  const avghighcard = document.getElementById('avgHcard');
+  const avglowcard = document.getElementById("avgLcard");
+  const avghigh = document.getElementById('avgH');
+  const avglow = document.getElementById('avgL')
   const stateNamepopup = document.getElementById('statename');
   const avgTemppopupF = document.getElementById('avgtempF');
   const avgTemppopupC = document.getElementById('avgtempC');
@@ -57,8 +61,6 @@ var currentseason;
       currentseason = selectedSeason;
 
 
-
-
       //use await for asynch
       //const avgtemperaturedata = await fetchTemperatureData(selectedSeason);
       /*states.style('fill', (d,i) => {
@@ -108,17 +110,26 @@ var currentseason;
     state.addEventListener('click', (event) => {
       stateNameOnCard.innerHTML = "State: " + stateId;
       avgTempFCARD.innerHTML = "Average Temperature: " + statedata[stateId][currentseason][0] + "°F or " + statedata[stateId][currentseason][1] + "°C";
+      avghighcard.innerHTML = "Average High: " + statedata[stateId][currentseason][2] + "°F";
+      avglowcard.innerHTML = "Average Low: " + statedata[stateId][currentseason][3] + "°F";
+      currenthigh = statedata[stateId][currentseason][2];
+      currentlow = statedata[stateId][currentseason][3]
+      console.log(currenthigh);
+      console.log(currentlow);
     });
     
+    //global variable storing current temperatures
+    var currenthigh;
+    var currentlow;
+
     //if the state is hovered over
     state.addEventListener('mouseover', (event) => {
       stateNamepopup.innerHTML = "State: " + stateId;
       avgTemppopupF.innerHTML = "Average Temperature: " + statedata[stateId][currentseason][0] + "°F or " + statedata[stateId][currentseason][1] + "°C";
-    
+      avghigh.innerHTML = "Average High: " + statedata[stateId][currentseason][2] + "°F";
+      avglow.innerHTML = "Average Low: " + statedata[stateId][currentseason][3] + "°F";
     });
   });
-
-
 
 
   document.addEventListener('click', (event) => {
@@ -127,9 +138,21 @@ var currentseason;
     }
   });
 
-
-
-
-
 });
+
+//figure out the range of temperatures (use farenheights for the sake of this)
+/*
+80 degrees an up
+70-80
+60-70
+50-60
+40-50
+30-40 
+20-30
+20 degrees and below: wear clothing that is layered, trenchcoats
+
+*/
+
+
+/* if ( avghigh.innerHTML >=  ) */
 
