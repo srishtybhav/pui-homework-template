@@ -23,10 +23,9 @@ function setup() {
     canvas.position(0,0);
     //canvas is behind htmlcssjs
     canvas.style('z-index', -1);
+    
     const dropdown = document.getElementById('Season');
     dropdown.addEventListener('change', updateScene);
-
-
 }
 
  /* 
@@ -117,14 +116,13 @@ function getScene(){
                 y = - 600;
             }
             break;
-        case 'Spring':
+        
+            case 'Spring':
 
 //floweranimation
             frameRate(3);
             var flowercoloroptions = [color(255, 204, 153), color(255, 153, 204), color(204, 153, 255), color(153, 204, 255), color(204, 204, 255), color(204, 255, 153) ];
             let flowerfill = random(flowercoloroptions);
-            
-            push()
             background(212,226,205);
             noStroke();
             x = random(0, width);
@@ -132,7 +130,7 @@ function getScene(){
             var size = 40;
             var flowers = 200;
 
-            for (let f = 0; f < flowers; f+5){
+            for (let f = 0; f < flowers; f++){
                 fill(flowerfill);
                 ellipse(x, y + size/2, size);
                 ellipse(x, y - size/2, size);
@@ -144,10 +142,7 @@ function getScene(){
                 ellipse(x, y, size-10);
             }
             break;
-
     }
-
-
 }
 
 
