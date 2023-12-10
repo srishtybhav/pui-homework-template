@@ -11,7 +11,7 @@ let leaves = 200;
 var canvas;
 let ywave = 0.0;
 
-
+//responsive background
 function windowResized(){
     resizeCanvas(windowWidth, windowHeight);
 }
