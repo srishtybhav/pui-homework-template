@@ -10,7 +10,7 @@
     height: auto;
     display: block;
 }
-
+/*parent*/
 .flex-container {
     justify-content: space-between;
     width: 100%;
@@ -20,7 +20,7 @@
     align-content: center;
 }
 
-  
+/*child*/
 .flexitemleft{
     width: 70%;
     position: relative;
@@ -28,7 +28,7 @@
     flex-flow: row wrap;
 
 }
-
+/*child*/
 .flexitemright{
     width: 25%;
     position: relative;
@@ -36,7 +36,7 @@
     overflow: hidden;
 
 }
-
+/*responsive*/
 @media screen and (max-width:760px) {
     .flex-container {
         flex-direction: column;
@@ -162,6 +162,7 @@ p{
     display: none;
 }
 
+/*outfit idea card is scrollable!*/
 .outfit-card{
     overflow: scroll;
     height: 500px;
@@ -178,10 +179,13 @@ p{
     box-sizing: border-box;
 }
 
+/* image displayed in the outfit idea car*/
 #outfitimage {
     display: block;
     max-width: 100%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -204,8 +208,8 @@ p{
     margin-left: 1%;
     padding: 8px;
     border-style: none; 
-    background-color: white;  
-    margin-bottom: 1%;
+    background-color: #D3D3D3;  
+    margin-bottom: 2%;
     border-radius: 10px;
     -webkit-appearance: none;
     appearance: none;

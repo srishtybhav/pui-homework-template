@@ -5,10 +5,12 @@
 
 //variable that will be assigned the option
 var Seasonname;
-
 let y = -1200;
 let snowflakes = 200;
+let leaves = 200;
 var canvas;
+let ywave = 0.0;
+
 
 function windowResized(){
     resizeCanvas(windowWidth, windowHeight);
@@ -21,10 +23,9 @@ function setup() {
     canvas.position(0,0);
     //canvas is behind htmlcssjs
     canvas.style('z-index', -1);
-
-
     const dropdown = document.getElementById('Season');
     dropdown.addEventListener('change', updateScene);
+
 
 }
 
@@ -51,19 +52,60 @@ function updateScene() {
 
 function getScene(){
     //each dropdown option must trigger a switch in the Season Scene 
+
     switch(Seasonname){
-        
-        case 'Summer':
-            background(221,252,247); 
 
+        case "Summer":
+            background(120,228,255); 
+            circle()
+
+            fill(0,157,196); // ocean blue
+    
+            //create perlin noise graph to look like waves
+
+            noStroke();
+            beginShape();
+
+            let xwave = 0;
+            for (let x = 0; x <= width; x += 10) {
+              let y = map(noise(xwave, ywave), 0, 1, 100, 300);
+
+              vertex(x, y);
+
+              xwave += 0.03; //increment small waves
+            }
+
+            ywave += 0.01;
+            vertex(width+1000, windowHeight);
+            vertex(0, windowHeight);
+            endShape(CLOSE);
             break;
-
         case "Fall":
-            background(	255,248,232); 
+            var leafcoloroptions = [color(161, 86, 28), color(222, 136, 45), color(190, 58, 52), color(106, 144,51), color(207, 181, 0), color(85, 80, 37) ];
+            let leaffill = random(leafcoloroptions);
+            frameRate(5);
+            background(59,79,2); 
+//fallingleaves
+                noStroke();
+                for (let l = 0; l < leaves; l++){
+                    push()
+                    fill(leaffill);
+                    rotate(random(360));
+                    ellipse(random(width), y + random(3000), 25, 50);
+                    //line(200, y + 175, 200, 275);
+                    pop();
+                }
+                y += 20;
+
+                if (y > 0) {
+                    y = - 600;
+                }
+
             break;
         case 'Winter':
+//snowfall animation
             frameRate(5);
-            background(	228, 242, 247);
+            background(211,225,255);
             fill(255);
             noStroke();
             for (let s = 0; s < snowflakes; s++){
@@ -76,12 +118,36 @@ function getScene(){
             }
             break;
         case 'Spring':
-            background(212,226,205);
 
+//floweranimation
+            frameRate(3);
+            var flowercoloroptions = [color(255, 204, 153), color(255, 153, 204), color(204, 153, 255), color(153, 204, 255), color(204, 204, 255), color(204, 255, 153) ];
+            let flowerfill = random(flowercoloroptions);
             
+            push()
+            background(212,226,205);
+            noStroke();
+            x = random(0, width);
+            y = random(0, height);
+            var size = 40;
+            var flowers = 200;
+
+            for (let f = 0; f < flowers; f+5){
+                fill(flowerfill);
+                ellipse(x, y + size/2, size);
+                ellipse(x, y - size/2, size);
+                ellipse(x + size/2, y, size);
+                ellipse(x - size/2, y, size);
+                stroke(2);
+                fill(255, 255, 204);
+                noStroke();
+                ellipse(x, y, size-10);
+            }
             break;
 
     }
+
+
 }
 
 

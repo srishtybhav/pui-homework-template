@@ -2,18 +2,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const Popup = document.getElementById('state-popup');
-  const card = document.getElementById('outfit-card');
   const avgTempFCARD = document.getElementById('avgweathercardF');
-  const avgTempCCARD = document.getElementById('avgweathercardC');
   const avghighcard = document.getElementById('avgHcard');
   const avglowcard = document.getElementById("avgLcard");
-  const avghigh = document.getElementById('avgH');
-  const avglow = document.getElementById('avgL')
   const stateNamepopup = document.getElementById('statename');
   const avgTemppopupF = document.getElementById('avgtempF');
-  const avgTemppopupC = document.getElementById('avgtempC');
   const stateNameOnCard = document.getElementById('statenamecard');
-  const seasonoption = document.querySelector('#Season');
   const selectedSeasonElement = document.querySelector('.selected-season');
   const selectedSeasonElementCard = document.querySelector('.selected-seasoncard');
   const outfitimg = document.getElementById("outfitimage");
@@ -28,28 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   //individual states selected by each path
   const states = usmap.selectAll('path');
 
-  //fetch temperatures from api
-  /*async function fetchTemperatureData(selectedSeason){
-    const apiKey = '46d5433b1deb69e95f4c8a2441e262cb';
-    const city = 'San Francisco'; 
-    const temperaturedataapiURL = `https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${apiKey}`;
-    let response = await fetch(temperaturedataapiURL);
-    let result = await response.json();
-    console.log('Temperature data:', result);
-
-
-    const avgtemperaturedata = {};
-    result.list.forEach(entry => {
-      const cityName = entry.city; 
-      const temperature = entry.main.temp_max;
-      avgtemperaturedata[city] = temperature;
-    });
-
-  
-    console.log('Temperature data:', avgtemperaturedata);
-    return avgtemperaturedata;
-  }
-  */
 
 var currentseason; 
   //the seasons on the card and popup will be updated to show the selected dropdown
@@ -60,16 +32,9 @@ var currentseason;
       //stores the selected season in the global variable
       currentseason = selectedSeason;
 
-
-      //use await for asynch
-      //const avgtemperaturedata = await fetchTemperatureData(selectedSeason);
-      /*states.style('fill', (d,i) => {
-        const statesname = d.id;
-        const temperature = avgtemperaturedata[statesname];
-        console.log('Temperature', temperature);
-        return temperature ? heatmapColorsgradient(temperature) : 'lightgray';
-      })
-      */
+      if (selectedSeason = "Select Season"){
+        hidePopup();
+      }
 
     };
 
@@ -87,7 +52,7 @@ var currentseason;
 
     stateNamepopup.innerHTML = stateNamepopup;
     
-    //positioning
+    //positioning of popup
     Popup.style.left = `${xPosition}px`;
     Popup.style.top = `${yPosition}px`;   
 
@@ -103,9 +68,6 @@ var currentseason;
   }; 
 
 
-  
-
-
 
   //for each state's path...
   document.querySelectorAll('path').forEach((state) => {
@@ -119,6 +81,7 @@ var currentseason;
       var currentlow = statedata[stateId][currentseason][3];
       var currentavg = statedata[stateId][currentseason][0];
 
+      //the farenheight to celcius calculation
       var celciushigh = ((currenthigh -32) * (5/9)).toFixed(1); //i realized i could just use the celcius conversion formula rather than manually putting it all in the dataset
       var celciuslow = ((currentlow -32) *(5/9)).toFixed(1);// "
 
@@ -127,7 +90,7 @@ var currentseason;
       avghighcard.innerHTML = "Average High: " + currenthigh + "°F or " +celciushigh + "°C";
       avglowcard.innerHTML = "Average Low: " + currentlow + "°F or " + celciuslow + "°C";
 
-      
+      //the outfit images given for each range
       if (currentlow < 20){ 
         outfitimg.src = "../FinalProjPUI/images/below20degreeweather.jpg";
       } else if (((currentavg + currentlow)/2) < 35) {
@@ -162,7 +125,6 @@ var currentseason;
 
 });
 
-//outfitimg.src = "../FinalProjPUI/images/below20degreeweather.jpg"
 
 //figure out the range of temperatures (use farenheights for the sake of this)
 /*

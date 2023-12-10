@@ -24,7 +24,7 @@
 
         <div>
             <button type = "dropdownbutton" class = "Seasondropdownbutton"  >
-                <span class = "dropdown" > Season </span>
+                <span class = "dropdown">  Season </span>
                 <select class = "dropdown"  name = "Seasons"  id = "Season" onchange="updateSelectedSeason(this.value)">
                     <option>Select Season</option>                    
                     <option>Summer</option>
@@ -37,12 +37,11 @@
             </button>
         </div>
 
+    <!-- a small popup that appears when hovering over a state-->
         <div id = "state-popup" class = "hidden"> 
             <h3 id = "statename" > </h3>
-            <p class = "selected-season"> Select a Season! </p>
-            <p id = "avgtempF">  </p> 
-            <p id = "avgH" > </p>
-            <p id = "avgL" > </p>
+            <p class = "selected-season" alt="The selected season from dropdown" >  </p>
+            <p id = "avgtempF" alt="The average temperature of the state">  </p> 
         </div>
 
         <div class="flex-container">
@@ -1191,15 +1190,16 @@
             <div class= "flexitemright" >
                 <div class = "outfit-card"  >
                     <h2> Outfit Ideas! </h2>
-                    <h3 id = "statenamecard" > </h3>
-                    <p class = "selected-seasoncard" ></p>
-                    <p id = "avgweathercardF" ></p>
-                    <p id = "avgHcard" ></p>
-                    <p id = "avgLcard" ></p>
-                    <img id = "outfitimage" src = "../FinalProjPUI/images/default.jpg" alt = "defaultimage" >
+                    <h3 id = "statenamecard" alt = "This is where the name of the state is given" >   </h3>
+                    <p class = "selected-seasoncard" alt = "This is where the selected season is given" ></p>
+                    <p id = "avgweathercardF" alt = "This is where the average temperature in farenheight and celsius is given" ></p>
+                    <p id = "avgHcard" alt = "This is where the average high temperature in farenheight and celsius is given" ></p>
+                    <p id = "avgLcard" alt = "This is where the average low temperature in farenheight and celsius is given"></p>
+                    <img id = "outfitimage" src = "../FinalProjPUI/images/default.jpg" alt = "default image  that is placed with instructions" >
 
 
                 </div>
+            
 
             </div>
     
