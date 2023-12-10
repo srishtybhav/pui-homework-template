@@ -6,7 +6,7 @@
         <title> US Weather Map </title>
         <!--page needs to scale to device-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../FinalProjPUI/css/finalproject.css">
+        <link rel="stylesheet" href="finalproject.css">
         <!--Color Scale library for gradients such as heat-->
         <script src="https://d3js.org/d3.v7.min.js"></script>
 
@@ -24,9 +24,8 @@
 
         <div>
             <button type = "dropdownbutton" class = "Seasondropdownbutton"  >
-                <span class = "dropdown">  Season </span>
+                <span class = "dropdown" > Season </span>
                 <select class = "dropdown"  name = "Seasons"  id = "Season" onchange="updateSelectedSeason(this.value)">
-                    <option>Select Season</option>                    
                     <option>Summer</option>
                     <option>Fall</option>
                     <option>Winter</option>
@@ -37,11 +36,10 @@
             </button>
         </div>
 
-    <!-- a small popup that appears when hovering over a state-->
         <div id = "state-popup" class = "hidden"> 
-            <h3 id = "statename" alt="The selected state"  > </h3>
-            <p class = "selected-season" alt="The selected season from dropdown" >  </p>
-            <p id = "avgtempF" alt="The average temperature of the state">  </p> 
+            <h3 id = "statename" > </h3>
+            <p class = "selected-season"> Select a Season! </p>
+            <p id = "avgtempF">  </p> 
         </div>
 
         <div class="flex-container">
@@ -881,7 +879,6 @@
                     class = "state"
                     inkscape:connector-curvature="0" />
                     <rect
-                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="39.197197"
@@ -889,7 +886,7 @@
                     height="30"
                     width="55"
                     id="rect3123"
-                    />
+                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
                 </g>
                 <g
                     onmouseover="showPopup('Vermont', event)"  
@@ -904,7 +901,6 @@
                 
                     inkscape:connector-curvature="0" />
                     <rect
-                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="39.197197"
@@ -912,7 +908,7 @@
                     height="30"
                     width="55"
                     id="rect3123-6"
-                    />
+                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
                 </g>
                 <g
                     onmouseover="showPopup('Vermont', event)"  
@@ -926,7 +922,6 @@
                     class = "state"            
                     inkscape:connector-curvature="0" />
                     <rect
-                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="161.09373"
@@ -934,7 +929,7 @@
                     height="30"
                     width="55"
                     id="rect3123-5"
-                    />
+                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
                 </g>
                 <g
                     onmouseover="showPopup('Connecticut', event)"  
@@ -948,7 +943,6 @@
                     class = "state"            
                     inkscape:connector-curvature="0" />
                     <rect
-                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="198.09373"
@@ -956,7 +950,7 @@
                     height="30"
                     width="55"
                     id="rect3123-63"
-                    />
+                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
                 </g>
                 <g
         
@@ -970,7 +964,6 @@
                     class = "state"
                     inkscape:connector-curvature="0" />
                     <rect
-                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="235.09373"
@@ -978,7 +971,7 @@
                     height="30"
                     width="55"
                     id="rect3123-9"
-                    />
+                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
                 </g>
                 <g
                     onmouseover="showPopup('Vermont', event)"  
@@ -991,8 +984,7 @@
                     id="Delaware"
                     class = "state"
                     inkscape:connector-curvature="0" />
-                    <rect 
-                    class = "rectstatecolor"
+                    <rect
                     rx="5.2295084"
                     ry="4.9714289"
                     y="272.09375"
@@ -1000,7 +992,7 @@
                     height="30"
                     width="55"
                     id="rect3123-4"
-                    />
+                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
                 </g>
                 <g
                     onmouseover="showPopup('Vermont', event)"  
@@ -1013,8 +1005,7 @@
                     id="Maryland"
                     class = "state"
                     inkscape:connector-curvature="0" />
-                    <rect 
-                    class = "rectstatecolor"
+                    <rect
                     rx="5.2295084"
                     ry="4.9714289"
                     y="309.09375"
@@ -1022,7 +1013,7 @@
                     height="30"
                     width="55"
                     id="rect3123-8"
-                    />
+                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
                 </g>
                 <text
                     xml:space="preserve"
@@ -1113,7 +1104,6 @@
                     class = "state" 
                     inkscape:connector-curvature="0" />
                     <rect
-                    class = "rectstatecolor"
                     rx="5.2295084"
                     ry="4.9714289"
                     y="124.09375"
@@ -1121,7 +1111,7 @@
                     height="30"
                     width="55"
                     id="rect3123-5-4"
-                    />
+                    style="fill:#aaaaaa;fill-opacity:1;stroke:#ffffff;stroke-width:1.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
                 </g>
                 <text
                     xml:space="preserve"
@@ -1189,17 +1179,14 @@
     
             <div class= "flexitemright" >
                 <div class = "outfit-card"  >
-                    <h2 > Outfit Ideas! </h2>
-                    <p id = "statenamecard" alt = "This is where the name of the state is given" >   </p>
-                    <p class = "selected-seasoncard" alt = "This is where the selected season is given" ></p>
-                    <p id = "avgweathercardF" alt = "This is where the average temperature in farenheight and celsius is given" ></p>
-                    <p id = "avgHcard" alt = "This is where the average high temperature in farenheight and celsius is given" ></p>
-                    <p id = "avgLcard" alt = "This is where the average low temperature in farenheight and celsius is given"></p>
-                    <img id = "outfitimage" src = "../FinalProjPUI/images/default.jpg" alt = "default image  that is placed with instructions" >
+                    <h2> Outfit Recommendation </h2>
+                    <h3 id = "statenamecard" > </h3>
+                    <p class = "selected-seasoncard" > Season: The season is currently unselected by default, use the dropdown menu to select one  </p>
+                    <p id = "avgweathercardF" > Average Temperature: </p>
+                    <p class= "fillertext" id = "avgweathercardF" > Outfit Recommendation images coming soon. they will be pre made combinations based on the what range the average temperature lies in.: </p>
 
 
                 </div>
-            
 
             </div>
     
@@ -1208,14 +1195,14 @@
 
         <!-- SOURCE OF SVG FILE: <a href=&quot;//commons.wikimedia.org/w/index.php?title=User:Hedgefighter&amp;amp;action=edit&amp;amp;redlink=1&quot; class=&quot;new&quot; title=&quot;User:Hedgefighter (page does not exist)&quot;&gt;Hedgefighter&lt;></a> - &lt;span class=&quot;int-own-work&quot; lang=&quot;en&quot;&gt;Own work&lt;/span&gt;, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=15412550">Link</a>-->
         <!--P5-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
         <!--accessing p5 dom-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.js"></script>
-        <script src="../FinalProjPUI/js/sketch.js" type="text/javascript"></script>
+        <script src="sketch.js" type="text/javascript"></script>
 
         <!--External javascript-->
-        <script defer src="../FinalProjPUI/js/finalprojpui.js"  ></script>
-        <script defer src="../FinalProjPUI/js/usclimatedata.js"  ></script>
+        <script defer src="finalprojpui.js"  ></script>
+        <script defer src="usclimatedata.js"  ></script>
     </body>
 </html>
 
